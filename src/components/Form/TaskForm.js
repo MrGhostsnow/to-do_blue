@@ -1,3 +1,4 @@
+import Button from "./Button"
 import FormControl from "./FormControl"
 import './TaskForm.css'
 
@@ -14,11 +15,12 @@ function TaskForm(props){
                     value={props.task_value}
                     completed={props.completed}
                 />
-            <button type="button" 
+            <Button type="button" 
                 className='btn_add'
-                onClick={props.onClick}>
-                    {props.button_label}
-                </button>
+                onClick={props.onClick}
+                label={props.label}/>
+                    
+                
         </div>
     )
 }

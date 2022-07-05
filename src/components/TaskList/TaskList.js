@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react' 
+import Button from '../Form/Button'
 import FormControl from "../Form/FormControl"
 import TaskForm from "../Form/TaskForm"
 import './TaskList.css'
@@ -83,24 +84,33 @@ function TaskList(){
     
                         value={task.task_id}
                     />
-                    <button type="button"
+                    <Button 
+                    type="button"
                         className={`btn btn-primary`}
-                        onClick={handleClick}>
-                        Search
-                    </button>
+                        onClick={handleClick}
+                        label="Search"/>
+                        
+                    
     
                 <TaskForm
                     onChange={handleChangeCreate}
                     descricao_value={newTask.task}
                     onClick={handleCreateTask}
-                    button_label={"Add new Task"}
+                    label={"Add new Task"}
                     />
                 {taskList.map((task, index)=>(
-                    <div key={index} className="card_Task">
+                   <>
+                   
+                   <div key={index} className="card_Task">
                         <div className="card_Body">
                         <p className="card_Text">{task.task}</p>
                         </div>
+                        <Button
+                   type="button"
+                   className={`btn-delete`}
+                   label="delete"/>
                      </div>
+                     </>
                 ))}
             </div>
         </div>
