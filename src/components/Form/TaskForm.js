@@ -1,11 +1,13 @@
 import FormControl from "./FormControl"
+import './TaskForm.css'
 
 function TaskForm(props){
     return (
-        <div>
+        <div className="container_TaskForm">
+                <h1>Task</h1>
                 <FormControl
                     id="criar_task"
-                    label="Task"
+                    // label="Task"
                     type="text"
                     onChange={props.onChange}
                     name="task"
@@ -13,7 +15,7 @@ function TaskForm(props){
                     completed={props.completed}
                 />
             <button type="button" 
-                className={`btn btn-danger`}
+                className='btn_add'
                 onClick={props.onClick}>
                     {props.button_label}
                 </button>

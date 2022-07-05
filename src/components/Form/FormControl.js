@@ -1,6 +1,8 @@
+import './FormControl.css'
+
 function FormControl(props) {
     return (
-      <div>
+      <div className='container_FormControl'>
         <label htmlFor={props.id} className="form-label">
           {props.label}
         </label>

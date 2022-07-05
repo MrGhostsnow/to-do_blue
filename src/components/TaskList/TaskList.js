@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react' 
 import FormControl from "../Form/FormControl"
 import TaskForm from "../Form/TaskForm"
+import './TaskList.css'
 
 function TaskList(){
 
@@ -40,11 +41,7 @@ function TaskList(){
     }
 
     useEffect(()=> {
-        findAllTasks()
-    }, []) 
-
-    useEffect(()=> {
-        findById(2)
+        findById()
     }, []) 
 
     useEffect(()=> {
@@ -74,36 +71,38 @@ function TaskList(){
 
 
     return(
-        <div className="PaletaLista"> 
-
-                <FormControl
-                    id="FindoneTask"
-                    label="Search "
-                    type="text"
-                    onChange={handleChange}
-                    name="task_id"
-                    
-                    value={task.task_id}
-                />
-                <button type="button" 
-                    className={`btn btn-primary`}
-                    onClick={handleClick}>
-                    Search
-                </button>
-                
-            <TaskForm 
-                onChange={handleChangeCreate}
-                descricao_value={newTask.task}
-                onClick={handleCreateTask}
-                button_label={"Add new Tasks"}
-                />
-            {taskList.map((task, index)=>(
-                <div key={index} className="card">
-                    <div className="card-body">
-                    <p className="card-text">{task.task}</p>
-                    </div>
-                 </div>
-            ))}
+        <div className="taskList"> 
+            <div className='container_Task'>
+    
+                    <FormControl
+                        id="FindoneTask"
+                        label="Search "
+                        type="text"
+                        onChange={handleChange}
+                        name="task_id"
+    
+                        value={task.task_id}
+                    />
+                    <button type="button"
+                        className={`btn btn-primary`}
+                        onClick={handleClick}>
+                        Search
+                    </button>
+    
+                <TaskForm
+                    onChange={handleChangeCreate}
+                    descricao_value={newTask.task}
+                    onClick={handleCreateTask}
+                    button_label={"Add new Task"}
+                    />
+                {taskList.map((task, index)=>(
+                    <div key={index} className="card_Task">
+                        <div className="card_Body">
+                        <p className="card_Text">{task.task}</p>
+                        </div>
+                     </div>
+                ))}
+            </div>
         </div>
     )
 }
