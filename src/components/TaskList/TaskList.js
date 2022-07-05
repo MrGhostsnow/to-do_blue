@@ -40,9 +40,9 @@ function TaskList(){
         setTaskList([newTask])
     }
 
-    useEffect(()=> {
-        findById()
-    }, []) 
+    // useEffect(()=> {
+    //     findById()
+    // }, []) 
 
     useEffect(()=> {
         findAllTasks()
