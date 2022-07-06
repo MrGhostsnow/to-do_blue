@@ -13,6 +13,7 @@ function TaskList(){
     const [ newTask, setNewTask ] = useState({
         task: "",
     })
+    const [search, setSearch] = useState("");
 
     const baseURL= 'http://localhost:8000/tasks';
 
@@ -81,7 +82,6 @@ function TaskList(){
                         type="text"
                         onChange={handleChange}
                         name="task_id"
-    
                         value={task.task_id}
                     />
                     <Button 
