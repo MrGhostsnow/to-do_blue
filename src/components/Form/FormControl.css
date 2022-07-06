@@ -1,20 +1,19 @@
 .container_FormControl {
-   display: flex;
-   flex-direction: column;
-   width: 25%;
-   font-family: 'Merriweather', serif;
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  font-family: "Merriweather", serif;
 }
 
-.container_FormControl input{
-    box-shadow: 10px 5px 5px black;
+.container_FormControl input {
+  box-shadow: 10px 5px 5px black;
 }
 
 .form-label {
-    font-size: 1.5em;
-    font-weight: 700;
+  font-size: 1.5em;
+  font-weight: 700;
 }
 
 .form-control {
-    padding: 0.3em;
+  padding: 0.3em;
 }
-

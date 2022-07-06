@@ -1,27 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap");
 
 .container_TaskForm {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: -12em;
-    margin-bottom: 8em;
-    
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -12em;
+  margin-bottom: 8em;
 }
 
-.container_TaskForm h1{
-    margin-bottom: 0;
-    font-family: 'Merriweather', serif;
+.container_TaskForm h1 {
+  margin-bottom: 0;
+  font-family: "Merriweather", serif;
 }
 
 .btn_add {
-    display: flex;
-    padding: 0.5em;
-    border: none;
-    border-radius: 0.3em;
-    margin-top: 0.3em;
-    background-color: black;
-    color: #fff;
-    cursor: pointer;
-    font-family: 'Merriweather', serif;
+  display: flex;
+  padding: 0.5em;
+  border: none;
+  border-radius: 0.3em;
+  margin-top: 0.3em;
+  background-color: black;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Merriweather", serif;
 }
